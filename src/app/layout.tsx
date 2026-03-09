@@ -24,7 +24,7 @@ export const metadata: Metadata = {
   title: "The Corner",
   description:
     "A curated digest assembled from verified human contributors. No AI-written content, ever.",
-  metadataBase: new URL("https://thecorner.news"),
+  metadataBase: new URL("https://the-corner-pi.vercel.app"),
   openGraph: {
     title: "The Corner",
     description:
