@@ -67,8 +67,8 @@ export default function Home() {
         <div className="masthead-title">
           <h1>The Corner</h1>
           <p className="tagline">
-            Human Soul &nbsp;&middot;&nbsp; AI Backbone &nbsp;&middot;&nbsp;
-            Zero Compromise
+            Human Soul &nbsp;&middot;&nbsp; No AI Inside &nbsp;&middot;&nbsp;
+            Pure Signal
           </p>
         </div>
         <div className="masthead-rule">
