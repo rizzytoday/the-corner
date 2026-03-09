@@ -339,6 +339,7 @@ export default function Home() {
       </section>
 
       {/* FINAL CTA */}
+      <div className="final-cta-wrap">
       <section className="final-cta">
         <Typewriter as="h2" text="Be here before the first issue." speed={45} />
         <p>Founding subscribers get lifetime early-access pricing and input on what The Corner covers.</p>
@@ -362,6 +363,7 @@ export default function Home() {
           )}
         </div>
       </section>
+      </div>
 
       {/* FOOTER */}
       <footer>

@@ -788,11 +788,14 @@ body {
 
 /* ── FINAL CTA ── */
 .final-cta {
-  border-top: 3px double var(--rule);
   padding: 72px 24px;
   text-align: center;
   max-width: 680px;
   margin: 0 auto;
+}
+
+.final-cta-wrap {
+  border-top: 3px double var(--rule);
 }
 
 .final-cta h2,
