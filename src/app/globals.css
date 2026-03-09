@@ -662,7 +662,7 @@ body {
 }
 
 .how-inner {
-  max-width: 800px;
+  max-width: 840px;
   margin: 0 auto;
 }
 
@@ -741,7 +741,7 @@ body {
 
 /* ── TRUST SECTION ── */
 .trust {
-  max-width: 680px;
+  max-width: 840px;
   margin: 0 auto;
   padding: 64px 24px;
 }
