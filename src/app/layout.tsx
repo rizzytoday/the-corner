@@ -21,12 +21,12 @@ const chomsky = localFont({
 });
 
 export const metadata: Metadata = {
-  title: "The Corner — Human-Curated Newsletter",
+  title: "The Corner",
   description:
     "A curated digest assembled from verified human contributors. No AI-written content, ever.",
   metadataBase: new URL("https://thecorner.news"),
   openGraph: {
-    title: "The Corner — Human-Curated Newsletter",
+    title: "The Corner",
     description:
       "The internet's best writing, all human. Delivered by AI.",
     siteName: "The Corner",
@@ -34,7 +34,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "The Corner — Human-Curated Newsletter",
+    title: "The Corner",
     description:
       "The internet's best writing, all human. Delivered by AI.",
   },
