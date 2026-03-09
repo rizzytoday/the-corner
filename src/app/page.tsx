@@ -363,8 +363,6 @@ export default function Home() {
         </div>
       </section>
 
-      <div className="section-divider" />
-
       {/* FOOTER */}
       <footer>
         <p>

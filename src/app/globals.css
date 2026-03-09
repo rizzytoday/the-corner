@@ -113,6 +113,9 @@ body {
   font-size: 11px;
   color: var(--ink-muted);
   letter-spacing: 0.05em;
+  margin: 0 -24px;
+  padding-left: 24px;
+  padding-right: 24px;
 }
 
 .masthead-rule hr {
@@ -581,9 +584,6 @@ body {
 
 /* ── DIVIDER ── */
 .section-divider {
-  max-width: 840px;
-  margin: 0 auto;
-  padding: 0 24px;
   border-top: 3px double var(--rule);
 }
 
