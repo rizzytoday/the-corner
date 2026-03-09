@@ -579,10 +579,7 @@ body {
   letter-spacing: 0.02em;
 }
 
-@media (max-width: 640px) {
-  .articles-grid { grid-template-columns: 1fr; }
-  .article-card.featured h3 { font-size: 18px; }
-}
+/* articles responsive merged into main breakpoint below */
 
 /* ── DIVIDER ── */
 .section-divider {
@@ -906,13 +903,61 @@ footer strong { color: var(--ink-muted); }
 
 /* ── RESPONSIVE ── */
 @media (max-width: 640px) {
-  .masthead-top { font-size: 9px; }
-  .manifesto-grid { grid-template-columns: 1fr; }
-  .how-cols { grid-template-columns: 1fr; }
-  .how-divider { display: none; }
-  .trust-grid { grid-template-columns: 1fr; }
+  /* Masthead */
+  .masthead { padding: 0 16px; }
+  .masthead-top { font-size: 8px; letter-spacing: 0.06em; padding: 8px 0 6px; }
+  .masthead-top .badge { font-size: 7px; }
+  .masthead-title { padding: 14px 0 10px; }
+  .masthead-title .tagline { font-size: 9px; letter-spacing: 0.15em; }
+  .masthead-rule { font-size: 10px; margin: 0 -16px; padding-left: 16px; padding-right: 16px; }
+  .masthead-right { gap: 6px; }
+  .mode-toggle-inline { width: 22px; height: 22px; }
+
+  /* Trending */
+  .trending-bar { font-size: 11px; gap: 10px; padding: 8px 0; justify-content: flex-start; }
+
+  /* Hero */
+  .hero { padding: 40px 16px; }
+  .hero h2 { font-size: clamp(24px, 7vw, 36px); }
+  .hero > p { font-size: 14px; }
+  .form-wrap { max-width: 100%; }
   .form-row { flex-direction: column; }
-  .form-row button { width: 100%; }
+  .form-row input { font-size: 14px; }
+  .form-row button { width: 100%; font-size: 11px; padding: 12px 20px; }
+  .payment-methods { gap: 8px; flex-wrap: wrap; justify-content: center; }
+  .pay-badge { font-size: 10px; }
+
+  /* Topics */
+  .topics { padding: 28px 16px; }
+  .topics-label { font-size: 10px; }
   .topic-tag { font-size: 11px; padding: 6px 10px; }
-  .payment-methods { gap: 10px; }
+
+  /* Articles */
+  .articles { padding: 40px 16px; }
+  .articles-grid { grid-template-columns: 1fr; }
+  .article-card { padding: 20px 16px 20px 24px; }
+  .article-card.featured h3 { font-size: 18px; }
+  .article-card h3 { font-size: 15px; }
+
+  /* Manifesto */
+  .manifesto { padding: 40px 16px; }
+  .manifesto-grid { grid-template-columns: 1fr; gap: 20px; }
+  .manifesto-stat .num { font-size: 32px; }
+
+  /* How It Works */
+  .how { padding: 40px 16px; }
+  .how-cols { grid-template-columns: 1fr; gap: 32px; }
+  .how-divider { display: none; }
+  .how-col h3 { font-size: 17px; }
+
+  /* Trust */
+  .trust { padding: 40px 16px; }
+  .trust-grid { grid-template-columns: 1fr; }
+  .trust-item { text-align: left; padding: 20px 0; }
+
+  /* Final CTA */
+  .final-cta { padding: 48px 16px; }
+
+  /* Footer */
+  footer { padding: 20px 16px; font-size: 9px; }
 }
