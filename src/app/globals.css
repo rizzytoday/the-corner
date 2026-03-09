@@ -583,6 +583,8 @@ body {
 
 /* ── DIVIDER ── */
 .section-divider {
+  max-width: 840px;
+  margin: 0 auto;
   border-top: 3px double var(--rule);
 }
 
