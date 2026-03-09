@@ -388,10 +388,13 @@ body {
   max-width: 720px;
   margin: 0 auto;
   padding: 40px 24px;
+}
+
+.topics-wrap {
+  max-width: 840px;
+  margin: 8px auto;
   border-top: 3px double var(--rule);
   border-bottom: 3px double var(--rule);
-  margin-top: 8px;
-  margin-bottom: 8px;
 }
 
 .topics-label {
@@ -658,12 +661,9 @@ body {
 
 /* ── HOW IT WORKS ── */
 .how {
-  padding: 64px 24px;
-}
-
-.how-inner {
   max-width: 840px;
   margin: 0 auto;
+  padding: 64px 24px;
 }
 
 .how .section-label { color: var(--red); }

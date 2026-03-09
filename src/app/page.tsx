@@ -164,6 +164,7 @@ export default function Home() {
       </section>
 
       {/* TOPICS */}
+      <div className="topics-wrap">
       <section className="topics">
         <p className="topics-label">Every corner of the internet, covered by humans</p>
         <div className="topics-grid">
@@ -172,6 +173,7 @@ export default function Home() {
           ))}
         </div>
       </section>
+      </div>
 
       {/* SAMPLE ARTICLES */}
       <section className="articles">
