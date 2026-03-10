@@ -23,12 +23,12 @@ const chomsky = localFont({
 export const metadata: Metadata = {
   title: "The Corner",
   description:
-    "A curated digest assembled from verified human contributors. No AI-written content, ever.",
+    "An open publishing platform where every post is AI-verified human. Subscribe to writers you love.",
   metadataBase: new URL("https://the-corner-pi.vercel.app"),
   openGraph: {
     title: "The Corner",
     description:
-      "The internet's best writing, all human. Delivered by AI.",
+      "Write freely. Get verified. Get paid. All human.",
     siteName: "The Corner",
     type: "website",
   },
@@ -36,7 +36,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "The Corner",
     description:
-      "The internet's best writing, all human. Delivered by AI.",
+      "Write freely. Get verified. Get paid. All human.",
   },
 };
 

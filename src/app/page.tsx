@@ -51,7 +51,7 @@ export default function Home() {
       {/* MASTHEAD */}
       <header className="masthead">
         <div className="masthead-top">
-          <span>Est. 2025 &nbsp;&middot;&nbsp; Human-Curated</span>
+          <span>Est. 2025 &nbsp;&middot;&nbsp; Human-Verified</span>
           <span className="badge">No AI Content Inside</span>
           <span className="masthead-right">
             <span>Issue 000 &nbsp;&middot;&nbsp; Founding Edition</span>
@@ -74,7 +74,7 @@ export default function Home() {
         <div className="masthead-rule">
           <hr />
           <Typewriter
-            text="A newsletter where every word is written by real people"
+            text="Where every word is verified human — written by anyone, read by everyone"
             speed={35}
             grow
           />
@@ -97,24 +97,24 @@ export default function Home() {
       <section className="hero">
         <div className="trust-pill">
           <span className="dot" />
-          Founding Waitlist Open
+          Open Platform — Join Now
         </div>
         <h2>
-          The internet&apos;s best writing,
+          Write. Get verified.
           <br />
-          <em>all human.</em> Delivered by AI.
+          <em>Get paid.</em> All human.
         </h2>
         <p>
-          A curated digest assembled from verified human contributors.
-          No AI-written content, ever. In a world drowning in generated text,
-          we&apos;re the corner of the internet that&apos;s still real.
+          An open publishing platform where anyone can write and every piece
+          is AI-verified as human-written. Subscribe to individual writers you love.
+          In a world drowning in generated text, this is the corner that&apos;s still real.
         </p>
 
         <div className="form-wrap">
           <h3>Get early access</h3>
           <p>
-            Join the founding reader list. First issues ship to early
-            subscribers.
+            Be a founding member. Writers get verified first. Readers
+            get free access to launch content.
           </p>
           {!heroSubmitted ? (
             <form onSubmit={(e) => handleSubmit(e, "hero")}>
@@ -166,7 +166,7 @@ export default function Home() {
       {/* TOPICS */}
       <div className="topics-wrap">
       <section className="topics">
-        <p className="topics-label">Every corner of the internet, covered by humans</p>
+        <p className="topics-label">Every corner of the internet, written by humans</p>
         <div className="topics-grid">
           {["Blockchain", "Software Engineering", "Media & Culture", "Health & Nutrition", "Builders & Makers", "Meditation & Mindfulness", "Design", "AI & Machine Learning", "Startups", "Living & Lifestyle", "Finance & Markets", "Open Source", "Psychology", "Creative Writing", "Web3 & DeFi", "Science", "Productivity", "Philosophy"].map((topic) => (
             <span key={topic} className="topic-tag">{topic}</span>
@@ -177,7 +177,7 @@ export default function Home() {
 
       {/* SAMPLE ARTICLES */}
       <section className="articles">
-        <div className="section-label">From The First Issue</div>
+        <div className="section-label">From Our Writers</div>
         <div className="articles-grid">
           <article className="article-card featured">
             <span className="article-topic">Blockchain</span>
@@ -240,7 +240,7 @@ export default function Home() {
             <circle cx="7" cy="7" r="6" stroke="currentColor" strokeWidth="1" />
             <path d="M5 7l2 2 3-3" stroke="currentColor" strokeWidth="1" strokeLinecap="round" strokeLinejoin="round" />
           </svg>
-          Every piece human-written. Contributors paid in USD, USDC, SOL, or ETH.
+          Every piece AI-verified human. Writers earn directly from subscribers.
         </p>
       </section>
 
@@ -261,7 +261,7 @@ export default function Home() {
           </div>
           <div className="manifesto-stat">
             <span className="num">0</span>
-            <p className="label">major newsletter platforms have claimed &ldquo;human-only&rdquo; as their identity. The gap is open.</p>
+            <p className="label">publishing platforms verify every post as human-written before it goes live. We do.</p>
           </div>
           <div className="manifesto-stat">
             <span className="num">&ndash;30%</span>
@@ -269,7 +269,7 @@ export default function Home() {
           </div>
           <div className="manifesto-stat">
             <span className="num">&infin;</span>
-            <p className="label">amount of AI-generated newsletters you&apos;ll receive this year. The Corner is not one of them.</p>
+            <p className="label">AI-generated posts flooding every platform. The Corner is the one place you know it&apos;s real.</p>
           </div>
         </div>
       </section>
@@ -284,23 +284,23 @@ export default function Home() {
           <div className="how-cols">
             <div className="how-col">
               <div className="sub">For Readers</div>
-              <h3>The best of the web, curated by humans</h3>
+              <h3>Subscribe to writers, not platforms</h3>
               <ul>
-                <li><span className="n">1</span><span>Sign up and pick your corners — blockchain, health, meditation, software, design, culture, and more</span></li>
-                <li><span className="n">2</span><span>AI profiles your preferences over time (what you click, save, share)</span></li>
-                <li><span className="n">3</span><span>Receive a personalized digest assembled entirely from human-written pieces</span></li>
-                <li><span className="n">4</span><span>Every issue is certified: 100% human-written, no exceptions</span></li>
+                <li><span className="n">1</span><span>Browse any writer&apos;s profile and read one free article to get a feel for their work</span></li>
+                <li><span className="n">2</span><span>Subscribe to individual writers you love — only pay for what you actually read</span></li>
+                <li><span className="n">3</span><span>Every piece is AI-verified human-written before it reaches you. No exceptions.</span></li>
+                <li><span className="n">4</span><span>Pay with card, USDC, SOL, or ETH — your choice, always transparent</span></li>
               </ul>
             </div>
             <div className="how-divider" />
             <div className="how-col">
               <div className="sub">For Writers</div>
-              <h3>Your best work, finally with an audience</h3>
+              <h3>Publish freely. Earn from your readers.</h3>
               <ul>
-                <li><span className="n">1</span><span>Apply to join the contributor pool — quality-gated, not quantity-driven</span></li>
-                <li><span className="n">2</span><span>Submit your writing or curated picks with commentary</span></li>
-                <li><span className="n">3</span><span>Editorial review ensures every piece meets the standard</span></li>
-                <li><span className="n">4</span><span>Get paid in USD or crypto (USDC, SOL, ETH) — your byline builds an audience</span></li>
+                <li><span className="n">1</span><span>Sign up and start writing — no applications, no gatekeepers, open to everyone</span></li>
+                <li><span className="n">2</span><span>Every post passes AI verification to confirm it&apos;s human-written</span></li>
+                <li><span className="n">3</span><span>Build your subscriber base — readers pay you directly for your work</span></li>
+                <li><span className="n">4</span><span>Get paid in USD or crypto (USDC, SOL, ETH) — you keep 85-90% of every subscription</span></li>
               </ul>
             </div>
           </div>
@@ -313,20 +313,20 @@ export default function Home() {
         <div className="trust-grid">
           <div className="trust-item">
             <svg className="icon" width="28" height="28" viewBox="0 0 28 28" fill="none">
+              <circle cx="14" cy="14" r="9" fill="none" stroke="currentColor" strokeWidth="1.5" />
+              <path d="M10 14l3 3 5-5" stroke="var(--red)" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+            </svg>
+            <h4>AI-Verified Human</h4>
+            <p>Every post passes AI detection before publishing. If it&apos;s not human, it doesn&apos;t go live.</p>
+          </div>
+          <div className="trust-item">
+            <svg className="icon" width="28" height="28" viewBox="0 0 28 28" fill="none">
               <rect x="4" y="6" width="20" height="16" rx="1" fill="none" stroke="currentColor" strokeWidth="1.5" />
               <path d="M9 11h10M9 14h7" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" />
               <path d="M17 18l2.5-2.5L22 18" stroke="var(--red)" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
             </svg>
-            <h4>Human-Written</h4>
-            <p>Every piece is written by a verified contributor. No AI generation, no exceptions.</p>
-          </div>
-          <div className="trust-item">
-            <svg className="icon" width="28" height="28" viewBox="0 0 28 28" fill="none">
-              <circle cx="14" cy="14" r="9" fill="none" stroke="currentColor" strokeWidth="1.5" />
-              <path d="M10 14l3 3 5-5" stroke="var(--red)" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
-            </svg>
-            <h4>Editorial Review</h4>
-            <p>Every piece passes review before it reaches readers. Quality is non-negotiable.</p>
+            <h4>Open to Everyone</h4>
+            <p>No applications, no gatekeepers. Anyone can publish — the AI gate ensures quality is real.</p>
           </div>
           <div className="trust-item">
             <svg className="icon" width="28" height="28" viewBox="0 0 28 28" fill="none">
@@ -334,8 +334,8 @@ export default function Home() {
               <path d="M9 8V6a5 5 0 0110 0v2" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" />
               <circle cx="14" cy="14" r="2" fill="var(--red)" />
             </svg>
-            <h4>Writers Get Paid</h4>
-            <p>Earnings in USD or crypto. USDC, SOL, or ETH — your choice, transparent always.</p>
+            <h4>Writers Keep 85-90%</h4>
+            <p>Subscribers pay writers directly. Card or crypto — USDC, SOL, ETH. Transparent, always.</p>
           </div>
         </div>
       </section>
@@ -344,7 +344,7 @@ export default function Home() {
       <div className="final-cta-wrap">
       <section className="final-cta">
         <Typewriter as="h2" text="Be here before the first issue." speed={45} />
-        <p>Founding subscribers get lifetime early-access pricing and input on what The Corner covers.</p>
+        <p>Founding members get early access. Writers get verified first. Readers shape the platform.</p>
         <div className="form-wrap">
           {!finalSubmitted ? (
             <form onSubmit={(e) => handleSubmit(e, "final")}>
@@ -379,7 +379,7 @@ export default function Home() {
       {/* FOOTER */}
       <footer>
         <p>
-          <strong>The Corner</strong> &nbsp;&middot;&nbsp; Human-curated. AI-distributed. &nbsp;&middot;&nbsp; No AI content inside &nbsp;&middot;&nbsp; &copy; 2025
+          <strong>The Corner</strong> &nbsp;&middot;&nbsp; Human-written. AI-verified. &nbsp;&middot;&nbsp; Open publishing platform &nbsp;&middot;&nbsp; &copy; 2025
         </p>
       </footer>
 
