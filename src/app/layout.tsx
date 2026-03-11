@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Inter, Playfair_Display } from "next/font/google";
 import localFont from "next/font/local";
+import { Analytics } from "@vercel/analytics/next";
 import { Agentation } from "agentation";
 import "./globals.css";
 
@@ -55,6 +56,7 @@ export default function RootLayout({
         className={`${inter.variable} ${playfair.variable} ${chomsky.variable} antialiased`}
       >
         {children}
+        <Analytics />
         {process.env.NODE_ENV === "development" && <Agentation />}
       </body>
     </html>
