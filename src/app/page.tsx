@@ -66,7 +66,7 @@ export default function Home() {
       {/* MASTHEAD */}
       <header className="masthead">
         <div className="masthead-top">
-          <span>Est. 2025 &nbsp;&middot;&nbsp; Human-Verified</span>
+          <span>Est. 2026 &nbsp;&middot;&nbsp; Human-Verified</span>
           <span className="badge">No AI Content Inside</span>
           <span>Issue 000 &nbsp;&middot;&nbsp; Founding Edition</span>
         </div>
