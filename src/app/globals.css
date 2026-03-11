@@ -579,6 +579,113 @@ body {
   letter-spacing: 0.02em;
 }
 
+/* ── SPECIAL CARDS ── */
+.article-badge {
+  margin-left: auto;
+  font-size: 9px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--red);
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.article-badge::before {
+  content: '';
+  width: 6px;
+  height: 6px;
+  border: 1.5px solid var(--red);
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.card-you {
+  background: color-mix(in srgb, var(--cream), var(--red) 4%);
+}
+
+.card-you::before {
+  height: 100%;
+  opacity: 0.4;
+}
+
+.avatar-you {
+  background: transparent;
+  border: 1.5px dashed var(--ink-faint);
+  color: var(--ink-faint);
+  font-size: 10px;
+}
+
+.card-model {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.card-model-visual {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: auto;
+  padding-top: 8px;
+}
+
+.model-step {
+  font-size: 11px;
+  font-weight: 600;
+  color: var(--ink-muted);
+  padding: 6px 12px;
+  border: 1px solid var(--rule);
+  white-space: nowrap;
+}
+
+.model-step.model-you {
+  border-color: var(--red);
+  color: var(--red);
+}
+
+.model-arrow {
+  font-size: 14px;
+  color: var(--ink-faint);
+}
+
+.card-verify {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.verify-visual {
+  margin-top: auto;
+  padding-top: 8px;
+}
+
+.verify-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 11px;
+  font-weight: 600;
+  color: var(--ink-muted);
+  padding: 6px 14px;
+  border: 1px solid var(--rule);
+  letter-spacing: 0.04em;
+}
+
+.card-cta {
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.card-cta:hover {
+  background: color-mix(in srgb, var(--cream), var(--red) 5%);
+}
+
+.card-cta .more-count {
+  color: var(--red);
+}
+
 /* articles responsive merged into main breakpoint below */
 
 /* ── DIVIDER ── */

@@ -7,16 +7,14 @@ export default function Home() {
   const [heroSubmitted, setHeroSubmitted] = useState(false);
   const [finalSubmitted, setFinalSubmitted] = useState(false);
   const [count, setCount] = useState(0);
+  const [submitting, setSubmitting] = useState(false);
 
   useEffect(() => {
-    const target = 47;
-    let cur = 0;
-    const timer = setInterval(() => {
-      cur = Math.min(cur + Math.ceil((target - cur) / 8), target);
-      setCount(cur);
-      if (cur >= target) clearInterval(timer);
-    }, 60);
-    return () => clearInterval(timer);
+    // Fetch real count from API
+    fetch("/api/waitlist")
+      .then((r) => r.json())
+      .then((d) => { if (d.count) setCount(d.count); })
+      .catch(() => {});
   }, []);
 
   useEffect(() => {
@@ -33,17 +31,34 @@ export default function Home() {
     });
   };
 
-  const handleSubmit = (
+  const handleSubmit = async (
     e: React.FormEvent<HTMLFormElement>,
     which: "hero" | "final"
   ) => {
     e.preventDefault();
-    if (which === "hero") {
-      setHeroSubmitted(true);
-      setCount((c) => c + 1);
-    } else {
-      setFinalSubmitted(true);
+    if (submitting) return;
+    setSubmitting(true);
+
+    const form = e.currentTarget;
+    const email = (form.querySelector('input[type="email"]') as HTMLInputElement)?.value;
+    const writerCheckbox = form.querySelector('input[type="checkbox"]') as HTMLInputElement;
+    const is_writer = writerCheckbox?.checked ?? false;
+
+    try {
+      const res = await fetch("/api/waitlist", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ email, is_writer }),
+      });
+      const data = await res.json();
+      if (data.count) setCount(data.count);
+    } catch {
+      // Still show success — we'll get the email next time
     }
+
+    if (which === "hero") setHeroSubmitted(true);
+    else setFinalSubmitted(true);
+    setSubmitting(false);
   };
 
   return (
@@ -175,9 +190,9 @@ export default function Home() {
       </section>
       </div>
 
-      {/* SAMPLE ARTICLES */}
+      {/* WHAT YOU'LL SEE */}
       <section className="articles">
-        <div className="section-label">From Our Writers</div>
+        <div className="section-label">What It Looks Like Inside</div>
         <div className="articles-grid">
           <article className="article-card featured">
             <span className="article-topic">Blockchain</span>
@@ -186,27 +201,7 @@ export default function Home() {
             <div className="article-meta">
               <span className="avatar">MC</span>
               <span className="article-author">Maya Chen</span>
-              <span className="article-time">8 min read</span>
-            </div>
-          </article>
-          <article className="article-card">
-            <span className="article-topic">Meditation</span>
-            <h3>The 4AM Protocol: What Monks Know About Focus That Founders Don&apos;t</h3>
-            <p>A 2,500-year-old attention framework, rewritten for the distraction economy.</p>
-            <div className="article-meta">
-              <span className="avatar">JP</span>
-              <span className="article-author">James Park</span>
-              <span className="article-time">6 min read</span>
-            </div>
-          </article>
-          <article className="article-card">
-            <span className="article-topic">Web3 & DeFi</span>
-            <h3>Stablecoins Are the Real Killer App. Everything Else Is Noise.</h3>
-            <p>$12 trillion in annual volume. Zero hype. Why USDC is quietly winning the future of money.</p>
-            <div className="article-meta">
-              <span className="avatar">LO</span>
-              <span className="article-author">Lena Okafor</span>
-              <span className="article-time">5 min read</span>
+              <span className="article-badge">Verified Human</span>
             </div>
           </article>
           <article className="article-card">
@@ -216,23 +211,46 @@ export default function Home() {
             <div className="article-meta">
               <span className="avatar">DK</span>
               <span className="article-author">David Kuresh</span>
-              <span className="article-time">10 min read</span>
+              <span className="article-badge">Verified Human</span>
             </div>
           </article>
-          <article className="article-card">
-            <span className="article-topic">Health</span>
-            <h3>The Metabolic Advantage Nobody Talks About: Walking After Meals</h3>
-            <p>Forget fasting protocols. 10 minutes post-meal is the simplest health hack backed by hard data.</p>
+          <article className="article-card card-you">
+            <span className="article-topic">Your Corner</span>
+            <h3>Your Next Article Goes Here</h3>
+            <p>Write about what you know. AI verifies it&apos;s really you. Your subscribers get notified. You get paid.</p>
             <div className="article-meta">
-              <span className="avatar">PN</span>
-              <span className="article-author">Dr. Priya Nair</span>
-              <span className="article-time">4 min read</span>
+              <span className="avatar avatar-you">?</span>
+              <span className="article-author">You</span>
+              <span className="article-badge">Verified Human</span>
             </div>
           </article>
-          <div className="article-card article-more">
-            <span className="more-count">+12</span>
-            <span className="more-label">more pieces in Issue 001</span>
-            <span className="more-topics">Builders, Philosophy, Finance, Creative Writing&hellip;</span>
+          <div className="article-card card-model">
+            <span className="article-topic">How It Works</span>
+            <h3>1 Free Article Per Writer</h3>
+            <p>Readers browse free. After one article, they subscribe to keep reading you. Card, USDC, SOL, or ETH.</p>
+            <div className="card-model-visual">
+              <span className="model-step">Read free</span>
+              <span className="model-arrow">&rarr;</span>
+              <span className="model-step">Subscribe</span>
+              <span className="model-arrow">&rarr;</span>
+              <span className="model-step model-you">You earn 85-90%</span>
+            </div>
+          </div>
+          <div className="article-card card-verify">
+            <span className="article-topic">Trust Layer</span>
+            <h3>Every Post Gets Verified</h3>
+            <p>Our AI scans every submission before publishing. Keystroke analysis, writing fingerprint, multi-signal detection. If it&apos;s not human, it doesn&apos;t go live.</p>
+            <div className="verify-visual">
+              <span className="verify-badge">
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><circle cx="8" cy="8" r="7" stroke="currentColor" strokeWidth="1.2" /><path d="M5 8l2.5 2.5L11 6" stroke="var(--red)" strokeWidth="1.2" strokeLinecap="round" strokeLinejoin="round" /></svg>
+                Human Verified
+              </span>
+            </div>
+          </div>
+          <div className="article-card article-more card-cta">
+            <span className="more-count">&rarr;</span>
+            <span className="more-label">Be the first to publish</span>
+            <span className="more-topics">Join the waitlist. Writers get early access.</span>
           </div>
         </div>
         <p className="articles-note">
