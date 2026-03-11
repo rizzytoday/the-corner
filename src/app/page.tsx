@@ -388,7 +388,7 @@ export default function Home() {
       {/* FOOTER */}
       <footer>
         <p>
-          <strong>The Corner</strong> &nbsp;&middot;&nbsp; Human-written. AI-verified. &nbsp;&middot;&nbsp; Open publishing platform &nbsp;&middot;&nbsp; &copy; 2025
+          <strong>The Corner</strong> &nbsp;&middot;&nbsp; Human-written. AI-verified. &nbsp;&middot;&nbsp; Open publishing platform &nbsp;&middot;&nbsp; &copy; 2026
         </p>
       </footer>
 
