@@ -152,17 +152,17 @@ export default function Home() {
             </span>
             <span className="pay-sep" />
             <span className="pay-badge">
-              <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><circle cx="7" cy="7" r="5.5" stroke="currentColor" strokeWidth="1" /><path d="M7 4v3l2 2" stroke="currentColor" strokeWidth="1" strokeLinecap="round" /></svg>
+              <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><circle cx="7" cy="7" r="5.5" stroke="currentColor" strokeWidth="1" /><path d="M8.5 5.2C8.2 4.5 7.6 4.2 7 4.2S5.5 4.6 5.5 5.3c0 .7.6 1 1.5 1.2s1.5.5 1.5 1.2c0 .7-.7 1.1-1.5 1.1s-1.2-.3-1.5-1" stroke="currentColor" strokeWidth="0.9" strokeLinecap="round" /><path d="M7 3.5v.7M7 8.8v.7" stroke="currentColor" strokeWidth="0.9" strokeLinecap="round" /></svg>
               USDC
             </span>
             <span className="pay-sep" />
             <span className="pay-badge">
-              <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M7 1L2 5l5 3 5-3-5-4zM2 9l5 3 5-3" stroke="currentColor" strokeWidth="1" strokeLinecap="round" strokeLinejoin="round" /></svg>
+              <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2.5 9.5h9l-1.8-1.5H4.3L2.5 9.5zM2.5 4.5h9l-1.8 1.5H4.3L2.5 4.5zM2.5 7h9" stroke="currentColor" strokeWidth="0.9" strokeLinecap="round" strokeLinejoin="round" /></svg>
               SOL
             </span>
             <span className="pay-sep" />
             <span className="pay-badge">
-              <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M7 1L1.5 7 7 13 12.5 7 7 1z" stroke="currentColor" strokeWidth="1" strokeLinejoin="round" /><path d="M1.5 7h11" stroke="currentColor" strokeWidth="0.75" /></svg>
+              <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M7 1.5L3 7l4 5.5L11 7 7 1.5z" stroke="currentColor" strokeWidth="0.9" strokeLinejoin="round" /><path d="M3 7h8" stroke="currentColor" strokeWidth="0.7" /></svg>
               ETH
             </span>
           </div>
