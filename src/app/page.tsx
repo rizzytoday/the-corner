@@ -365,7 +365,7 @@ export default function Home() {
                 <input type="checkbox" id="writer-final" />
                 <label htmlFor="writer-final">
                   <span className="checkbox-box" />
-                  I want to write for The Corner
+                  I want to write on The Corner
                 </label>
               </div>
             </form>
