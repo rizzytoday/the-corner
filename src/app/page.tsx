@@ -116,7 +116,7 @@ export default function Home() {
           In a world drowning in generated text, this is the corner that&apos;s still real.
         </p>
 
-        <div className="form-wrap">
+        <div id="signup" className="form-wrap">
           <h3>Get early access</h3>
           <p>
             Be a founding member. Writers get verified first. Readers
@@ -238,11 +238,11 @@ export default function Home() {
               </span>
             </div>
           </div>
-          <div className="article-card article-more card-cta">
+          <a href="#signup" className="article-card article-more card-cta">
             <span className="more-count">&rarr;</span>
             <span className="more-label">Be the first to publish</span>
             <span className="more-topics">Join the waitlist. Writers get early access.</span>
-          </div>
+          </a>
         </div>
         <p className="articles-note">
           <svg width="14" height="14" viewBox="0 0 14 14" fill="none" style={{ verticalAlign: '-2px', marginRight: '6px' }}>

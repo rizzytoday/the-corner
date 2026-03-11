@@ -684,6 +684,8 @@ body {
 .card-cta {
   cursor: pointer;
   transition: background 0.2s;
+  text-decoration: none;
+  color: inherit;
 }
 
 .card-cta:hover {
