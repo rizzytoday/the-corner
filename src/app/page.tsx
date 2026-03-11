@@ -68,16 +68,7 @@ export default function Home() {
         <div className="masthead-top">
           <span>Est. 2025 &nbsp;&middot;&nbsp; Human-Verified</span>
           <span className="badge">No AI Content Inside</span>
-          <span className="masthead-right">
-            <span>Issue 000 &nbsp;&middot;&nbsp; Founding Edition</span>
-            <button className="mode-toggle-inline" onClick={toggleMode} aria-label="Toggle mode" title={readingMode ? "Switch to clean" : "Switch to warm"}>
-              {readingMode ? (
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><path d="M4 19.5A2.5 2.5 0 016.5 17H20" /><path d="M6.5 2H20v20H6.5A2.5 2.5 0 014 19.5v-15A2.5 2.5 0 016.5 2z" /></svg>
-              ) : (
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round"><circle cx="12" cy="12" r="4" /><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41" /></svg>
-              )}
-            </button>
-          </span>
+          <span>Issue 000 &nbsp;&middot;&nbsp; Founding Edition</span>
         </div>
         <div className="masthead-title">
           <h1>The Corner</h1>
@@ -200,7 +191,7 @@ export default function Home() {
             <p>Micropayments on Solana are already faster than Stripe. The next wave of creator platforms won&apos;t ask for your credit card.</p>
             <div className="article-meta">
               <span className="avatar">MC</span>
-              <span className="article-author">Maya Chen</span>
+              <span className="article-author">Maya Chen <svg className="verified-check" width="13" height="13" viewBox="0 0 16 16" fill="none"><circle cx="8" cy="8" r="7" fill="var(--red)" /><path d="M5 8l2.5 2.5L11 6" stroke="var(--cream)" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" /></svg></span>
               <span className="article-badge">Verified Human</span>
             </div>
           </article>
@@ -210,7 +201,7 @@ export default function Home() {
             <p>Auth, payments, email, analytics. All self-hosted. The savings are real. The pain is too.</p>
             <div className="article-meta">
               <span className="avatar">DK</span>
-              <span className="article-author">David Kuresh</span>
+              <span className="article-author">David Kuresh <svg className="verified-check" width="13" height="13" viewBox="0 0 16 16" fill="none"><circle cx="8" cy="8" r="7" fill="var(--red)" /><path d="M5 8l2.5 2.5L11 6" stroke="var(--cream)" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" /></svg></span>
               <span className="article-badge">Verified Human</span>
             </div>
           </article>
@@ -220,7 +211,7 @@ export default function Home() {
             <p>Write about what you know. AI verifies it&apos;s really you. Your subscribers get notified. You get paid.</p>
             <div className="article-meta">
               <span className="avatar avatar-you">?</span>
-              <span className="article-author">You</span>
+              <span className="article-author">You <svg className="verified-check verified-pending" width="13" height="13" viewBox="0 0 16 16" fill="none"><circle cx="8" cy="8" r="7" stroke="var(--ink-faint)" strokeWidth="1.2" strokeDasharray="3 2" /><path d="M5 8l2.5 2.5L11 6" stroke="var(--ink-faint)" strokeWidth="1.2" strokeLinecap="round" strokeLinejoin="round" /></svg></span>
               <span className="article-badge">Verified Human</span>
             </div>
           </article>
