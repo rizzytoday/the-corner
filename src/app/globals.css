@@ -124,21 +124,16 @@ body {
   border-top: 1px solid var(--rule);
 }
 
-/* ── TRENDING BAR ── */
+/* ── TRENDING TICKER ── */
 .trending-bar {
   display: flex;
   align-items: center;
-  justify-content: center;
-  gap: 16px;
   padding: 10px 0;
   border-top: 1px solid var(--rule);
   font-size: 12px;
-  overflow-x: auto;
+  overflow: hidden;
   white-space: nowrap;
-  scrollbar-width: none;
 }
-
-.trending-bar::-webkit-scrollbar { display: none; }
 
 .trending-live {
   font-size: 10px;
@@ -147,6 +142,33 @@ body {
   text-transform: uppercase;
   color: var(--red);
   flex-shrink: 0;
+  padding-right: 16px;
+  z-index: 1;
+}
+
+.ticker-track {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  animation: ticker-scroll 20s linear infinite;
+  will-change: transform;
+}
+
+.ticker-track:hover {
+  animation-play-state: paused;
+}
+
+.ticker-item {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  flex-shrink: 0;
+}
+
+.ticker-item::after {
+  content: "·";
+  color: var(--ink-faint);
+  margin-left: 10px;
 }
 
 .trending-bar a {
@@ -167,6 +189,11 @@ body {
   color: var(--ink-faint);
   font-weight: 400;
   flex-shrink: 0;
+}
+
+@keyframes ticker-scroll {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
 }
 
 /* ── HERO ── */

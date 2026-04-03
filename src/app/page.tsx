@@ -88,14 +88,28 @@ export default function Home() {
         </div>
         <div className="trending-bar">
           <span className="trending-live">Trending</span>
-          <a href="#">AI Content Crisis</a>
-          <span className="trending-time">2h ago</span>
-          <a href="#">Creator Economy Shift</a>
-          <span className="trending-time">4h ago</span>
-          <a href="#">Solana DeFi Summer</a>
-          <span className="trending-time">5h ago</span>
-          <a href="#">Mindful Tech Movement</a>
-          <span className="trending-time">6h ago</span>
+          <div className="ticker-track">
+            {[...Array(2)].map((_, i) => (
+              <div key={i} style={{ display: "flex", alignItems: "center", gap: 16 }}>
+                <span className="ticker-item">
+                  <a href="#">AI Content Crisis</a>
+                  <span className="trending-time">2h ago</span>
+                </span>
+                <span className="ticker-item">
+                  <a href="#">Creator Economy Shift</a>
+                  <span className="trending-time">4h ago</span>
+                </span>
+                <span className="ticker-item">
+                  <a href="#">Solana DeFi Summer</a>
+                  <span className="trending-time">5h ago</span>
+                </span>
+                <span className="ticker-item">
+                  <a href="#">Mindful Tech Movement</a>
+                  <span className="trending-time">6h ago</span>
+                </span>
+              </div>
+            ))}
+          </div>
         </div>
       </header>
 
